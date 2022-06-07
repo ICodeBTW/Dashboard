@@ -1,0 +1,17 @@
+ <div class="ui dimmer blurring visible active" (click)="onClose()">
+   <div class="ui modal inverted visible active" (click)="$event.stopPropagation()">
+     <i class="close icon" (click)="onClose()"> </i>
+       <div class="header">
+        <ng-content select="header"></ng-content>
+       </div>
+       <div class="content">
+         <ng-content select="content"></ng-content>
+       </div>
+       <div class="actions">
+         <button class="ui button"  (click)="onClose()">OK</button>
+       </div>
+       <!-- <div class="actions">
+         <ng-content select="[actions]"></ng-content>
+       </div> -->
+    </div>
+ </div>

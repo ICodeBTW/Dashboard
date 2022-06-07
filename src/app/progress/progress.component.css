@@ -1,0 +1,17 @@
+.box{
+  width: 45px;
+  height: 45px;
+  border-radius: 20px;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .green{
+    background-color: green;
+  }
+
+  .yellow{
+    background-color: rgb(255, 255, 0);
+  }

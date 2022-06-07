@@ -1,0 +1,17 @@
+.centered-search{
+  top: 40%;
+  left: 50%;
+  width: 50em;
+  height: 5em;
+  transform: translate(-50%, 0%);
+  position: fixed;
+}
+.search{
+  width: 50em;
+  height: 5em;
+}
+
+input{
+  padding: 5px;
+}
+

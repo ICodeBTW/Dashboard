@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Dashboard';
+  menuStatus:boolean = false;
+  menuClick(value:boolean){
+    this.menuStatus = value;
+  }
+
 }

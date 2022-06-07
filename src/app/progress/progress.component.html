@@ -1,0 +1,82 @@
+<app-tree (nodeInfo)="onNodeClick($event)" [RITM]="RITMnumber" ></app-tree>
+<app-modal-view *ngIf="modalStatus && legend" (close)="onModalClose($event)">
+  <header>
+    Legend
+  </header>
+  <content>
+    <div class="ui divided items">
+      <div class="item">
+        <div class="ui tiny image">
+           <div class="box indicate-green green"></div>
+        </div>
+        <div class="middle aligned content">
+          Completed Process
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui tiny image">
+          <div class="box indicate-red red"></div>
+        </div>
+        <div class="middle aligned content">
+          Failed Process
+        </div>
+      </div>
+      <div class="item">
+        <div class="ui tiny image">
+          <div class="box indicate-yellow yellow"></div>
+        </div>
+        <div class="middle aligned content">
+          Active Process
+        </div>
+      </div>
+    </div>
+  </content>
+</app-modal-view>
+<app-modal-view *ngIf="modalStatus && !legend" (close)="onModalClose($event)">
+  <header>
+    {{ SelectedNode.title }}
+  </header>
+  <content>
+    <div class="ui items">
+      <div class="item">
+        <div class="image">
+          <img src="https://semantic-ui.com/images/wireframe/image.png" />
+        </div>
+        <div class="content">
+          <a class="header">{{ SelectedNode.name }}</a>
+          <div class="meta">
+            <span>{{ SelectedNode.details }}</span>
+          </div>
+          <div class="description">
+            <p></p>
+          </div>
+          <div class="extra">
+            {{ SelectedNode.cmd }}
+          </div>
+        </div>
+      </div>
+      <div
+        class="ui indicating progress"
+        [attr.data-percent]="
+          SelectedNode.state == 'completed'
+            ? 100
+            : SelectedNode.state == 'failed'
+            ? 100
+            : 50
+        "
+        [attr.data-total]="100"
+        [ngClass]="{
+          success: SelectedNode.state == 'completed',
+          error: SelectedNode.state == 'failed',
+          active: SelectedNode.state == 'active'
+        }"
+      >
+        <div
+          class="bar"
+          [ngStyle]="{ width: (SelectedNode.progress ? 100 : 50) + '%' }"
+        ></div>
+        <div class="label">{{ SelectedNode.state }}</div>
+      </div>
+    </div>
+  </content>
+</app-modal-view>

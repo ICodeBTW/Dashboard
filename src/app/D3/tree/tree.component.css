@@ -1,0 +1,16 @@
+.centered-box{
+  top: 10%;
+  left: 50%;
+  width: 125em;
+  height: 50em;
+  transform: translate(-50%, 0%);
+  position: fixed;
+}
+
+.hidden{
+  display: none;
+}
+
+.icon {
+  cursor: pointer;
+}

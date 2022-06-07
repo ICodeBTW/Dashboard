@@ -1,1 +1,219 @@
 /* You can add global styles to this file, and also import other style files */
+.xAxis path,
+.xAxis line {
+  stroke: teal;
+  shape-rendering: crispEdges;
+}
+.xAxis text {
+  font-family: Optima, Futura, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  fill: teal;
+}
+
+.node circle {
+  stroke-width: 1px;
+
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.link-red {
+  stroke: #f00;
+}
+
+.link-green {
+  stroke: #0d9e36;
+}
+
+.link-yellow {
+  stroke: #ff0;
+}
+
+
+.indicate-green {
+  stroke: green;
+
+  fill: #0d9e36;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px,
+    #00ff00 0 2px 12px;
+}
+
+.indicate-yellow {
+  stroke: yellow;
+
+  fill: rgb(251, 255, 4);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+    rgb(230, 230, 104) 0 2px 12px;
+  -webkit-animation: blinkYellow 1s infinite;
+  -moz-animation: blinkYellow 1s infinite;
+  -ms-animation: blinkYellow 1s infinite;
+  -o-animation: blinkYellow 1s infinite;
+  animation: blinkYellow 1s infinite;
+}
+
+@-webkit-keyframes blinkYellow {
+  from {
+    fill: rgb(251, 255, 4);
+  }
+  50% {
+    fill: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      rgb(251, 255, 4) 0 2px 0;
+  }
+  to {
+    fill: rgb(251, 255, 4);
+  }
+}
+@-moz-keyframes blinkYellow {
+  from {
+    fill: #ff0;
+  }
+  50% {
+    fill: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 2px 0;
+  }
+  to {
+    fill: #ff0;
+  }
+}
+@-ms-keyframes blinkYellow {
+  from {
+    fill: #ff0;
+  }
+  50% {
+    fill: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 2px 0;
+  }
+  to {
+    fill: #ff0;
+  }
+}
+@-o-keyframes blinkYellow {
+  from {
+    fill: #ff0;
+  }
+  50% {
+    fill: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 2px 0;
+  }
+  to {
+    fill: #ff0;
+  }
+}
+@keyframes blinkYellow {
+  from {
+    fill: #ff0;
+  }
+  50% {
+    fill: #aa0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px,
+      #ff0 0 2px 0;
+  }
+  to {
+    fill: #ff0;
+  }
+}
+
+.indicate-red {
+  stroke: red;
+
+  fill: #f00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+    rgba(255, 0, 0, 0.5) 0 2px 12px;
+  -webkit-animation: blinkRed 0.5s infinite;
+  -moz-animation: blinkRed 0.5s infinite;
+  -ms-animation: blinkRed 0.5s infinite;
+  -o-animation: blinkRed 0.5s infinite;
+  animation: blinkRed 0.5s infinite;
+}
+
+@-webkit-keyframes blinkRed {
+  from {
+    fill: #f00;
+  }
+  50% {
+    fill: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    fill: #f00;
+  }
+}
+@-moz-keyframes blinkRed {
+  from {
+    fill: #f00;
+  }
+  50% {
+    fill: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    fill: #f00;
+  }
+}
+@-ms-keyframes blinkRed {
+  from {
+    fill: #f00;
+  }
+  50% {
+    fill: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    fill: #f00;
+  }
+}
+@-o-keyframes blinkRed {
+  from {
+    fill: #f00;
+  }
+  50% {
+    fill: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    fill: #f00;
+  }
+}
+@keyframes blinkRed {
+  from {
+    fill: #f00;
+  }
+  50% {
+    fill: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px,
+      rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    fill: #f00;
+  }
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+body{
+
+overflow-y: hidden;
+}

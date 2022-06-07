@@ -1,0 +1,30 @@
+<div class="ui fluid category search centered-search">
+  <div class="ui icon input">
+    <form (submit)="onSubmit($event)" >
+      <input
+      class="prompt search"
+      type="text"
+      placeholder="Search RITMS"
+      (input)="onSearchInput($event)"
+      [value]="searchTerm"
+    />
+    </form>
+    <i class="search icon"></i>
+  </div>
+  <div
+    class="results"
+    [ngClass]="{ 'transition visible': filteredData.length > 0 }"
+  >
+    <div class="category" *ngFor="let item of filteredData;let i = index" (click)="onResultClick(item.title)">
+      <div class="name">{{item.category}}</div>
+      <div
+        class="results transition visible"
+        style="display: table-cell !important"
+      >
+        <a class="result"
+          ><div class="content"><div class="title">{{item.title}}</div></div></a
+        >
+      </div>
+    </div>
+  </div>
+</div>

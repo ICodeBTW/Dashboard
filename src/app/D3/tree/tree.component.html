@@ -1,0 +1,20 @@
+<div class="ui segment centered-box" *ngIf="!loaded">
+  <div class="ui active loader"></div>
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+
+<div class="ui card centered-box" [ngClass]="{ hidden: !loaded }">
+  <div class="content">
+    <div class="meta right floated" (click)="onResetZoom()">
+      <i class="icon zoom"> </i>
+    </div>
+    <div class="meta left floated">
+      <i class="icon chart bar" (click)="modalClick()"></i>
+    </div>
+  </div>
+  <figure #chart></figure>
+</div>
+
